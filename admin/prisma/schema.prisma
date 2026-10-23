@@ -1,0 +1,121 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  username     String   @unique
+  passwordHash String
+  name         String?
+  role         String   @default("admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model OwnerInfo {
+  id       String   @id @default(cuid())
+  name     String
+  role     String
+  bio      String // multi-paragraph, separated by \n\n
+  phone    String
+  whatsapp String
+  email    String?
+  address  String
+  city     String
+  state    String
+  pincode  String
+  country  String
+  stats    String // JSON string: [{label, value}]
+  photoUrl String?
+  updatedAt DateTime @updatedAt
+}
+
+model SiteContent {
+  id               String   @id @default(cuid())
+  companyName      String
+  tagline          String
+  heroHeadline     String
+  heroSubtext      String
+  heroCtaPrimary   String
+  heroCtaSecondary String
+  heroVideoUrl     String?  // optional hero background video (YouTube / Vimeo / direct MP4/WEBM)
+  whatsappNumber   String
+  email            String?
+  instagram        String?
+  youtube          String?
+  vimeo            String?
+  facebook         String?
+  updatedAt        DateTime @updatedAt
+}
+
+model PhotographyCategory {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  order       Int      @default(0)
+  published   Boolean  @default(false)
+  photos      Photo[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Photo {
+  id          String               @id @default(cuid())
+  title       String
+  description String?
+  imageUrl    String
+  categoryId  String
+  category    PhotographyCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  order       Int      @default(0)
+  published   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model VideoCategory {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  order       Int      @default(0)
+  published   Boolean  @default(false)
+  videos      Video[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Video {
+  id           String       @id @default(cuid())
+  title        String
+  description  String?
+  videoUrl     String
+  thumbnailUrl String?
+  duration     String?
+  categoryId   String
+  category     VideoCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  order        Int      @default(0)
+  published    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  icon        String // 'camera' | 'film' | 'edit' | 'event' | 'portrait' | 'corporate' | 'product' | 'social'
+  order       Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
