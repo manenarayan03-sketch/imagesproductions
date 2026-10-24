@@ -11,7 +11,6 @@ const FALLBACK = {
   heroCtaSecondary: "CONTACT US",
   heroVideoUrl: null,
   whatsappNumber: "+91 8433975695",
-  email: null,
   instagram: "",
   youtube: "",
   vimeo: "",
@@ -20,7 +19,22 @@ const FALLBACK = {
 
 export async function GET() {
   try {
-    const site = await db.siteContent.findFirst();
+    const site = await db.siteContent.findFirst({
+      select: {
+        companyName: true,
+        tagline: true,
+        heroHeadline: true,
+        heroSubtext: true,
+        heroCtaPrimary: true,
+        heroCtaSecondary: true,
+        heroVideoUrl: true,
+        whatsappNumber: true,
+        instagram: true,
+        youtube: true,
+        vimeo: true,
+        facebook: true,
+      },
+    });
     if (!site) {
       return NextResponse.json({ site: FALLBACK });
     }

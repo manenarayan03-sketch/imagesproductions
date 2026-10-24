@@ -21,7 +21,6 @@ export async function GET() {
         bio: owner.bio,
         phone: owner.phone,
         whatsapp: owner.whatsapp,
-        email: owner.email,
         address: owner.address,
         city: owner.city,
         state: owner.state,

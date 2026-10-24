@@ -51,18 +51,18 @@ export function About({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="order-1 lg:order-1 flex justify-center lg:justify-start"
+            className="order-1 flex w-full min-w-0 justify-center lg:order-1 lg:justify-start"
           >
             <EditorialPortrait
               photoUrl={photoUrl}
               name={ownerName}
               role={ownerRole}
-              reduce={reduce}
+              reduce={!!reduce}
             />
           </motion.div>
 
           {/* Right — Content */}
-          <div className="order-2 lg:order-2">
+          <div className="order-2 min-w-0 lg:order-2">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -142,7 +142,7 @@ function EditorialPortrait({
   const caption = `${name} — ${role}`;
 
   return (
-    <div className="w-full max-w-[460px]">
+    <div className="w-full min-w-0 max-w-[460px]">
       {/* Outer museum double-frame */}
       <div
         className="relative"
@@ -167,7 +167,6 @@ function EditorialPortrait({
             className="relative overflow-hidden"
             style={{
               aspectRatio: "4 / 5",
-              minHeight: 480,
               background:
                 "radial-gradient(800px 500px at 30% 20%, rgba(65,105,225,0.18), transparent 60%), radial-gradient(700px 500px at 80% 100%, rgba(109,40,217,0.16), transparent 60%), #08080b",
             }}
@@ -195,8 +194,8 @@ function EditorialPortrait({
       </div>
 
       {/* Caption — Marcellus italic */}
-      <div className="mt-5 text-center">
-        <div className="font-heading italic text-cream/85 text-sm md:text-base tracking-wide">
+      <div className="mt-5 px-2 text-center">
+        <div className="font-heading italic text-cream/85 text-sm md:text-base tracking-wide text-balance">
           {caption}
         </div>
         <div className="mt-1.5 mx-auto h-px w-12 bg-gold/50" />

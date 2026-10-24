@@ -37,7 +37,6 @@ type Owner = {
   role: string;
   phone: string;
   whatsapp: string;
-  email: string | null;
   address: string;
   city: string;
   state: string;

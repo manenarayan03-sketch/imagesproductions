@@ -31,7 +31,6 @@ async function getInitialData() {
         bio: ownerRow.bio,
         phone: ownerRow.phone,
         whatsapp: ownerRow.whatsapp,
-        email: ownerRow.email,
         address: ownerRow.address,
         city: ownerRow.city,
         state: ownerRow.state,

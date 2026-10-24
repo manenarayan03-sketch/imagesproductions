@@ -102,7 +102,7 @@ export function Hero({
       {/* Top corner gold line */}
       <div className="absolute top-24 left-0 right-0 h-px gold-divider opacity-60 z-[3]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 text-center">
+      <div className="relative z-10 mx-auto w-full min-w-0 max-w-7xl px-4 sm:px-6 text-center">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -119,7 +119,7 @@ export function Hero({
 
           <motion.h1
             variants={item}
-            className="mt-8 font-heading text-cream text-balance text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.92] tracking-tight text-glow-gold"
+            className="mt-8 w-full min-w-0 font-heading text-cream text-balance text-[clamp(2.75rem,13vw,4.5rem)] sm:text-7xl md:text-8xl lg:text-9xl leading-[0.92] tracking-tight text-glow-gold"
           >
             {headline}
           </motion.h1>

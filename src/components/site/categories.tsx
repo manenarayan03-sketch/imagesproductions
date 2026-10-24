@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   MessageCircle,
@@ -80,6 +81,7 @@ function pauseAllCategoryPreviews() {
 
 const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   "wedding-photography": "Emotion-filled wedding moments, preserved in timeless frames.",
+  "traditional-wedding-photography": "The rituals, details, and emotion of your wedding, captured with a timeless editorial eye.",
   "pre-wedding-photography": "Romantic portraits shaped around each couple's story.",
   "baby-shower-photography": "Joyful details and memories from a beautiful new beginning.",
   "candid-photography": "Natural expressions and unscripted moments, captured as they happen.",
@@ -89,6 +91,14 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   "event-videos": "The energy, people, and highlights of every celebration.",
   "promotional-videos": "Purposeful video stories created to introduce and promote your brand.",
   "social-media-reels": "Short, share-ready films with a visual story in every second.",
+};
+
+const VIDEO_POSTERS: Record<string, string> = {
+  "cinematic-wedding-highlights": "/uploads/portfolio/wedding-photography/_KPL4474.JPG",
+  "pre-wedding-films": "/uploads/portfolio/pre-wedding-photography/_RTP4259.jpg",
+  "corporate-videos": "/uploads/portfolio/brand/logo.jpeg",
+  "event-videos": "/uploads/portfolio/baby-shower/179A9323.JPG",
+  "social-media-reels": "/uploads/portfolio/brand/logo.jpeg",
 };
 
 /* ---------------- Main Categories Section ---------------- */
@@ -217,6 +227,7 @@ export function Categories({ whatsapp }: { whatsapp: string }) {
                   <CategoryCard
                     key={c.id}
                     name={c.name}
+                    slug={c.slug}
                     description={c.description || CATEGORY_DESCRIPTIONS[c.slug] || "Explore a curated collection from Images Production."}
                     count={tab === "photos" ? (c as PhotoCat)._count?.photos ?? 0 : (c as VideoCat)._count?.videos ?? 0}
                     kind={tab}
@@ -247,6 +258,7 @@ export function Categories({ whatsapp }: { whatsapp: string }) {
 /* ---------------- Category Card ---------------- */
 function CategoryCard({
   name,
+  slug,
   description,
   count,
   kind,
@@ -257,6 +269,7 @@ function CategoryCard({
   onClick,
 }: {
   name: string;
+  slug: string;
   description: string;
   count: number;
   kind: TabKind;
@@ -267,28 +280,31 @@ function CategoryCard({
   onClick: () => void;
 }) {
   return (
-    <motion.button
-      type="button"
-      onClick={onClick}
+    <motion.article
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative w-full text-left rounded-2xl border border-gold/20 bg-[#0b0b11] overflow-hidden transition-all duration-500 hover:border-gold/50 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+      className="group relative w-full text-left rounded-2xl border border-gold/20 bg-[#0b0b11] overflow-hidden transition-all duration-500 hover:border-gold/50 hover:-translate-y-1"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-[#08080b]">
+      <button
+        type="button"
+        onClick={onClick}
+        aria-label={`Quick view ${name}`}
+        className="relative block aspect-[4/3] w-full overflow-hidden bg-[#08080b] text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold"
+      >
         {kind === "photos" && featuredPhoto ? (
           <img
             src={featuredPhoto.imageUrl}
             alt={featuredPhoto.title || name}
             loading="lazy"
             decoding="async"
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+            className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04] group-hover:saturate-110"
           />
         ) : kind === "videos" && featuredVideo ? (
           <CategoryVideoPreview
             src={featuredVideo.videoUrl}
-            poster={featuredVideo.thumbnailUrl || undefined}
+            poster={featuredVideo.thumbnailUrl || VIDEO_POSTERS[slug]}
             title={featuredVideo.title}
             reduce={reduce}
           />
@@ -302,21 +318,24 @@ function CategoryCard({
             {name}
           </h3>
         </div>
-      </div>
+      </button>
 
       <div className="flex min-h-36 flex-col justify-between gap-5 p-5 sm:p-6">
         <p className="text-sm leading-relaxed text-cream/65 line-clamp-3">
           {description}
         </p>
         <div className="flex items-center justify-between gap-4">
-          <span className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-[10px] font-medium tracking-[0.16em] uppercase text-ink transition-colors group-hover:bg-cream">
+          <Link
+            href={`/portfolio/${kind}/${encodeURIComponent(slug)}`}
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-[10px] font-medium tracking-[0.16em] uppercase text-ink transition-colors hover:bg-cream focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0b11]"
+          >
             Explore Category
             <ArrowUpRight className="h-3.5 w-3.5" />
-          </span>
+          </Link>
           <ChevronRight className="h-5 w-5 text-gold transition-transform group-hover:translate-x-1" />
         </div>
       </div>
-    </motion.button>
+    </motion.article>
   );
 }
 
