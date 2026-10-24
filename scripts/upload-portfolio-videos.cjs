@@ -16,16 +16,19 @@ const ROOT = process.cwd();
 const BUCKET = process.env.SUPABASE_VIDEO_BUCKET || "portfolio-videos";
 const CHUNK_SIZE = 6 * 1024 * 1024;
 const MAX_FILE_BYTES = Number(process.env.SUPABASE_VIDEO_MAX_FILE_BYTES || 50 * 1024 * 1024);
+const EXTERNAL_VIDEO_DIR = process.env.SUPABASE_VIDEO_SOURCE_DIR || "";
 const PUBLIC_URLS_PATH = path.join(ROOT, "src", "lib", "portfolio-video-urls.json");
 const STATE_PATH = path.join(ROOT, ".cache", "portfolio-tus-state.json");
 const videos = [
   {
     id: "cmvldeh3m007nvm50612smr32",
     category: "event-videos",
-    title: "Birthday Hight",
+    title: "Event Films",
     source: "public/uploads/portfolio/event-social-videos/Birthday Hight.mp4",
     sourceAlternates: [".cache/reduced-videos/Event Films-compressed.mp4"],
-    object: "event-videos/birthday-hight.mp4",
+    externalSource: "Birthday Hight-compressed.mp4",
+    replaceExisting: true,
+    object: "event-videos/event-films.mp4",
   },
   {
     id: "cmvldeh1z0075vm50y60n0zqw",
@@ -34,28 +37,36 @@ const videos = [
     source: "public/uploads/portfolio/cinematic-wedding-highlights/Cinematic Weds.mp4",
     object: "cinematic-wedding-highlights/cinematic-weds.mp4",
     sourceAlternates: [".cache/reduced-videos/Cinematic Weds-compressed (2).mp4"],
+    externalSource: "Cinematic Weds-compressed (3).mp4",
+    replaceExisting: true,
   },
   {
     id: "cmvldeh2j007bvm50ojyr0q3f",
     category: "pre-wedding-films",
-    title: "A + N Prewedding Highlight1",
+    title: "Pre-Wedding Films",
     source: "public/uploads/portfolio/pre-wedding-films/A + N - Prewedding Highlight1.mp4",
     sourceAlternates: [".cache/reduced-videos/Pre-Wedding Films-compressed.mp4"],
-    object: "pre-wedding-films/a-n-prewedding-highlight1.mp4",
+    externalSource: "Pre-Wedding Films-compressed-compressed.mp4",
+    replaceExisting: true,
+    object: "pre-wedding-films/pre-wedding-films.mp4",
   },
   {
     id: "cmvldeh2v007fvm502yf7avho",
     category: "corporate-videos",
-    title: "CA Firm",
+    title: "Corporate Video",
     source: "public/uploads/portfolio/corporate-promotional-films/CA Firm.mp4",
     sourceAlternates: [".cache/reduced-videos/Corporate Video-compressed.mp4"],
-    object: "corporate-videos/ca-firm.mp4",
+    externalSource: "Corporate Video-compressed-compressed.mp4",
+    replaceExisting: true,
+    object: "corporate-videos/corporate-video.mp4",
   },
   {
     id: "cmvldeh3s007pvm50bf2a7wfl",
     category: "social-media-reels",
     title: "Images Production",
     source: "public/uploads/portfolio/event-social-videos/Images Production.mp4",
+    externalSource: "Images Production-compressed.mp4",
+    replaceExisting: true,
     object: "social-media-reels/images-production.mp4",
   },
   {
@@ -63,29 +74,19 @@ const videos = [
     category: "corporate-videos",
     title: "Dela",
     source: "public/uploads/portfolio/corporate-promotional-films/Dela.mp4",
+    externalSource: "Dela-compressed (1).mp4",
+    replaceExisting: true,
     object: "corporate-videos/dela.mp4",
   },
   {
-    id: "cmvldeh2p007dvm50bcunkivp",
-    category: "pre-wedding-films",
-    title: "A + N Teaser 1",
-    source: "public/uploads/portfolio/pre-wedding-films/A + N - Teaser 1.mp4",
-    object: "pre-wedding-films/a-n-teaser-1.mp4",
-  },
-  {
-    id: "cmvldeh260077vm504dqrvtjg",
-    category: "cinematic-wedding-highlights",
-    title: "Teaser Final",
-    source: "public/uploads/portfolio/cinematic-wedding-highlights/Teaser_ Final.mp4",
-    object: "cinematic-wedding-highlights/teaser-final.mp4",
-  },
-  {
     id: "cmvldeh3a007jvm50prj83shy",
-    category: "corporate-videos",
-    title: "Puspak Patpedi documentary",
+    category: "promotional-videos",
+    title: "Promotional Films",
     source: "public/uploads/portfolio/corporate-promotional-films/Puspak Patpedi documentary.mp4",
-    object: "corporate-videos/puspak-patpedi-documentary.mp4",
+    object: "promotional-videos/promotional-films.mp4",
     sourceAlternates: [".cache/reduced-videos/Promotional Films-compressed (1).mp4"],
+    externalSource: "Promotional Films-compressed (1)-compressed.mp4",
+    replaceExisting: true,
   },
   {
     id: "cmvldeh2d0079vm50ij5kv6hm",
@@ -93,6 +94,8 @@ const videos = [
     title: "Wedding Films",
     source: "public/uploads/portfolio/cinematic-wedding-highlights/Wedding Films.mp4",
     sourceAlternates: [".cache/reduced-videos/Wedding Films-compressed.mp4"],
+    externalSource: "Wedding Films-compressed (1).mp4",
+    replaceExisting: true,
     object: "cinematic-wedding-highlights/wedding-films.mp4",
     hero: true,
   },
@@ -101,14 +104,9 @@ const videos = [
     category: "corporate-videos",
     title: "Tecnoformat",
     source: "public/uploads/portfolio/corporate-promotional-films/Tecnoformat.mp4",
+    externalSource: "tecnoformat-compressed.mp4",
+    replaceExisting: true,
     object: "corporate-videos/tecnoformat.mp4",
-  },
-  {
-    id: "cmvldeh3x007rvm5002zuynkb",
-    category: "social-media-reels",
-    title: "Reel Shoot 1",
-    source: "public/uploads/portfolio/event-social-videos/Reel Shoot_1.mp4",
-    object: "social-media-reels/reel-shoot-1.mp4",
   },
 ];
 
@@ -385,6 +383,17 @@ async function main() {
       .filter(({ fullPath }) => fs.existsSync(fullPath))
       .map((source) => ({ ...source, size: fs.statSync(source.fullPath).size }))
       .sort((a, b) => a.size - b.size);
+    if (video.externalSource && EXTERNAL_VIDEO_DIR) {
+      const externalPath = path.join(EXTERNAL_VIDEO_DIR, video.externalSource);
+      if (fs.existsSync(externalPath)) {
+        sourcePaths.push({
+          relativePath: externalPath,
+          fullPath: externalPath,
+          size: fs.statSync(externalPath).size,
+        });
+      }
+    }
+    sourcePaths.sort((a, b) => a.size - b.size);
     if (sourcePaths.length === 0) throw new Error(`Video source not found: ${video.source}`);
     const source = sourcePaths.find((candidate) => candidate.size <= MAX_FILE_BYTES);
     const selectedSource = source || sourcePaths[0];
@@ -396,7 +405,7 @@ async function main() {
       continue;
     }
     const existingUrl = publicUrls[video.id];
-    if (existingUrl) {
+    if (existingUrl && !video.replaceExisting) {
       const head = await request(existingUrl, { method: "HEAD" });
       if (head.ok) {
         console.log(`Already hosted: ${video.title}`);
