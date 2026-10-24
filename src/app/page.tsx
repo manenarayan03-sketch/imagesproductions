@@ -8,9 +8,11 @@ import { Contact } from "@/components/site/contact";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import portfolioFallback from "@/lib/portfolio-fallback.json";
-import portfolioVideoUrls from "@/lib/portfolio-video-urls";
 
 export const dynamic = "force-dynamic";
+
+// Default hero background video, served from /public.
+const HERO_VIDEO_URL = "/videos/hero-wedding-films.mp4";
 
 async function getInitialData() {
   try {
@@ -52,7 +54,7 @@ async function getInitialData() {
       heroSubtext: "Photography • Videography • Video Editing",
       heroCtaPrimary: "VIEW OUR WORK",
       heroCtaSecondary: "CONTACT US",
-      heroVideoUrl: "/uploads/videos/Wedding%20Films.mp4",
+      heroVideoUrl: HERO_VIDEO_URL,
       whatsappNumber: "+91 8433975695",
       email: null,
       instagram: null,
@@ -72,7 +74,7 @@ async function getInitialData() {
         heroSubtext: "Photography • Videography • Video Editing",
         heroCtaPrimary: "VIEW OUR WORK",
         heroCtaSecondary: "CONTACT US",
-        heroVideoUrl: "/uploads/videos/Wedding%20Films.mp4",
+        heroVideoUrl: HERO_VIDEO_URL,
         whatsappNumber: "+91 8433975695",
         email: null,
         instagram: null,
@@ -100,9 +102,11 @@ export default async function Home() {
           secondaryCta={site.heroCtaSecondary}
           whatsapp={whatsapp}
           heroVideoUrl={
-            typeof site.heroVideoUrl === "string" && site.heroVideoUrl.startsWith("/uploads/")
-              ? portfolioVideoUrls.hero ?? null
-              : site.heroVideoUrl
+            typeof site.heroVideoUrl === "string" &&
+            site.heroVideoUrl.trim() &&
+            !site.heroVideoUrl.startsWith("/uploads/")
+              ? site.heroVideoUrl
+              : HERO_VIDEO_URL
           }
         />
         <About owner={owner} whatsapp={whatsapp} />

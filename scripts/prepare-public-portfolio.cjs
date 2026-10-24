@@ -245,5 +245,7 @@ main()
     process.exitCode = 1;
   })
   .finally(async () => {
-    await db.$disconnect();
+    // The Prisma engine may not be generated yet (this runs before `prisma generate`),
+    // so a failed disconnect must not fail the build.
+    await db.$disconnect().catch(() => {});
   });
