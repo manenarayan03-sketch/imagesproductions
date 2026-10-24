@@ -21,7 +21,6 @@ export async function GET() {
         videos: {
           where: { published: true },
           orderBy: [{ order: "asc" }, { createdAt: "desc" }],
-          take: 1,
           select: {
             id: true,
             title: true,
@@ -34,16 +33,20 @@ export async function GET() {
     return NextResponse.json({
       categories: cats.map((category) => ({
         ...category,
-        videos: category.videos.map((video) => {
-          const fallbackVideo = portfolioFallback.videos.find((item) => item.id === video.id);
-          return {
-            ...video,
-            videoUrl:
-              portfolioVideoUrls[video.id] ??
-              (video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl),
-            thumbnailUrl: fallbackVideo?.thumbnailUrl ?? video.thumbnailUrl,
-          };
-        }),
+        videos: (() => {
+          const preparedVideos = category.videos.map((video) => {
+            const fallbackVideo = portfolioFallback.videos.find((item) => item.id === video.id);
+            return {
+              ...video,
+              videoUrl:
+                portfolioVideoUrls[video.id] ??
+                (video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl),
+              thumbnailUrl: fallbackVideo?.thumbnailUrl ?? video.thumbnailUrl,
+            };
+          });
+          const featured = preparedVideos.find((video) => video.videoUrl) ?? preparedVideos[0];
+          return featured ? [featured] : [];
+        })(),
       })),
     });
   } catch (e) {
@@ -51,11 +54,16 @@ export async function GET() {
       return NextResponse.json({
         categories: portfolioFallback.videoCategories.map((category) => ({
           ...category,
-          videos: category.videos.map((video) => ({
-            ...video,
-            videoUrl:
-              portfolioVideoUrls[video.id] ?? video.videoUrl,
-          })),
+          videos: (() => {
+            const preparedVideos = portfolioFallback.videos
+              .filter((video) => video.categoryId === category.id)
+              .map((video) => ({
+                ...video,
+                videoUrl: portfolioVideoUrls[video.id] ?? video.videoUrl,
+              }));
+            const featured = preparedVideos.find((video) => video.videoUrl) ?? preparedVideos[0];
+            return featured ? [featured] : category.videos;
+          })(),
         })),
       });
     }

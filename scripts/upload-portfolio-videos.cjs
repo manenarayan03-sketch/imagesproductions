@@ -15,6 +15,7 @@ resolver.setServers(["1.1.1.1", "8.8.8.8"]);
 const ROOT = process.cwd();
 const BUCKET = process.env.SUPABASE_VIDEO_BUCKET || "portfolio-videos";
 const CHUNK_SIZE = 6 * 1024 * 1024;
+const MAX_FILE_BYTES = Number(process.env.SUPABASE_VIDEO_MAX_FILE_BYTES || 50 * 1024 * 1024);
 const PUBLIC_URLS_PATH = path.join(ROOT, "src", "lib", "portfolio-video-urls.json");
 const STATE_PATH = path.join(ROOT, ".cache", "portfolio-tus-state.json");
 const videos = [
@@ -23,6 +24,7 @@ const videos = [
     category: "event-videos",
     title: "Birthday Hight",
     source: "public/uploads/portfolio/event-social-videos/Birthday Hight.mp4",
+    sourceAlternates: [".cache/reduced-videos/Event Films-compressed.mp4"],
     object: "event-videos/birthday-hight.mp4",
   },
   {
@@ -31,12 +33,14 @@ const videos = [
     title: "Cinematic Weds",
     source: "public/uploads/portfolio/cinematic-wedding-highlights/Cinematic Weds.mp4",
     object: "cinematic-wedding-highlights/cinematic-weds.mp4",
+    sourceAlternates: [".cache/reduced-videos/Cinematic Weds-compressed (2).mp4"],
   },
   {
     id: "cmvldeh2j007bvm50ojyr0q3f",
     category: "pre-wedding-films",
     title: "A + N Prewedding Highlight1",
     source: "public/uploads/portfolio/pre-wedding-films/A + N - Prewedding Highlight1.mp4",
+    sourceAlternates: [".cache/reduced-videos/Pre-Wedding Films-compressed.mp4"],
     object: "pre-wedding-films/a-n-prewedding-highlight1.mp4",
   },
   {
@@ -44,6 +48,7 @@ const videos = [
     category: "corporate-videos",
     title: "CA Firm",
     source: "public/uploads/portfolio/corporate-promotional-films/CA Firm.mp4",
+    sourceAlternates: [".cache/reduced-videos/Corporate Video-compressed.mp4"],
     object: "corporate-videos/ca-firm.mp4",
   },
   {
@@ -80,12 +85,14 @@ const videos = [
     title: "Puspak Patpedi documentary",
     source: "public/uploads/portfolio/corporate-promotional-films/Puspak Patpedi documentary.mp4",
     object: "corporate-videos/puspak-patpedi-documentary.mp4",
+    sourceAlternates: [".cache/reduced-videos/Promotional Films-compressed (1).mp4"],
   },
   {
     id: "cmvldeh2d0079vm50ij5kv6hm",
     category: "cinematic-wedding-highlights",
     title: "Wedding Films",
     source: "public/uploads/portfolio/cinematic-wedding-highlights/Wedding Films.mp4",
+    sourceAlternates: [".cache/reduced-videos/Wedding Films-compressed.mp4"],
     object: "cinematic-wedding-highlights/wedding-films.mp4",
     hero: true,
   },
@@ -179,7 +186,10 @@ async function request(url, options = {}) {
 }
 
 async function ensureBucket(baseUrl, serviceKey) {
-  const headers = { apikey: serviceKey };
+  const headers = {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+  };
   const existing = await request(`${baseUrl}/storage/v1/bucket/${BUCKET}`, { headers });
   if (existing.ok) {
     const update = await request(`${baseUrl}/storage/v1/bucket/${BUCKET}`, {
@@ -187,7 +197,7 @@ async function ensureBucket(baseUrl, serviceKey) {
       headers: { ...headers, "Content-Type": "application/json" },
       body: JSON.stringify({
         public: true,
-        file_size_limit: 700 * 1024 * 1024,
+        file_size_limit: MAX_FILE_BYTES,
         allowed_mime_types: ["video/mp4", "video/webm"],
       }),
     });
@@ -211,7 +221,7 @@ async function ensureBucket(baseUrl, serviceKey) {
       id: BUCKET,
       name: BUCKET,
       public: true,
-      file_size_limit: 700 * 1024 * 1024,
+      file_size_limit: MAX_FILE_BYTES,
       allowed_mime_types: ["video/mp4", "video/webm"],
     }),
   });
@@ -275,10 +285,13 @@ async function getUploadOffset(uploadUrl, headers) {
 }
 
 async function uploadVideo(baseUrl, serviceKey, video, state) {
-  const filePath = path.join(ROOT, video.source);
+  const filePath = video.uploadSourcePath || path.join(ROOT, video.source);
   if (!fs.existsSync(filePath)) throw new Error(`Video source not found: ${video.source}`);
   const size = fs.statSync(filePath).size;
-  const headers = { apikey: serviceKey };
+  const headers = {
+    apikey: serviceKey,
+    Authorization: `Bearer ${serviceKey}`,
+  };
   const endpoint = `${baseUrl.replace(".supabase.co", ".storage.supabase.co")}/storage/v1/upload/resumable`;
   let uploadUrl = state[video.object]?.uploadUrl;
   if (!uploadUrl) {
@@ -364,8 +377,24 @@ async function main() {
   const state = loadState();
   const publicUrls = JSON.parse(fs.readFileSync(PUBLIC_URLS_PATH, "utf8"));
   const successful = [];
+  const skipped = [];
 
   for (const video of videos) {
+    const sourcePaths = [video.source, ...(video.sourceAlternates || [])]
+      .map((relativePath) => ({ relativePath, fullPath: path.join(ROOT, relativePath) }))
+      .filter(({ fullPath }) => fs.existsSync(fullPath))
+      .map((source) => ({ ...source, size: fs.statSync(source.fullPath).size }))
+      .sort((a, b) => a.size - b.size);
+    if (sourcePaths.length === 0) throw new Error(`Video source not found: ${video.source}`);
+    const source = sourcePaths.find((candidate) => candidate.size <= MAX_FILE_BYTES);
+    const selectedSource = source || sourcePaths[0];
+    const fileSize = selectedSource.size;
+    video.uploadSourcePath = selectedSource.fullPath;
+    if (fileSize > MAX_FILE_BYTES) {
+      console.log(`Skipping ${video.title}: best available file is ${(fileSize / 1024 / 1024).toFixed(1)} MB; bucket limit is ${(MAX_FILE_BYTES / 1024 / 1024).toFixed(0)} MB.`);
+      skipped.push({ title: video.title, sizeMB: Number((fileSize / 1024 / 1024).toFixed(1)) });
+      continue;
+    }
     const existingUrl = publicUrls[video.id];
     if (existingUrl) {
       const head = await request(existingUrl, { method: "HEAD" });
@@ -376,7 +405,7 @@ async function main() {
       }
     }
 
-    console.log(`Uploading ${video.title} (${(fs.statSync(path.join(ROOT, video.source)).size / 1024 / 1024).toFixed(1)} MB)`);
+    console.log(`Uploading ${video.title} (${(fileSize / 1024 / 1024).toFixed(1)} MB)${selectedSource.relativePath !== video.source ? " from compressed archive" : ""}`);
     const publicUrl = await uploadVideo(baseUrl, serviceKey, video, state);
     publicUrls[video.id] = publicUrl;
     if (video.hero) publicUrls.hero = publicUrl;
@@ -387,6 +416,7 @@ async function main() {
   console.log(JSON.stringify({
     bucket: BUCKET,
     uploaded: successful,
+    skipped,
     totalConfigured: videos.length,
     urlManifest: path.relative(ROOT, PUBLIC_URLS_PATH),
     nextStep: "Commit src/lib/portfolio-video-urls.json and push to trigger the live video update.",

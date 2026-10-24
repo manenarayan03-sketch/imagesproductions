@@ -15,7 +15,7 @@ values (
   'portfolio-videos',
   'portfolio-videos',
   true,
-  734003200,
+  52428800,
   array['video/mp4', 'video/webm']::text[]
 )
 on conflict (id) do update set
