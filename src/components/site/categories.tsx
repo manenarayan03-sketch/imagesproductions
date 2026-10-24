@@ -62,7 +62,7 @@ type Video = {
   id: string;
   title: string;
   description?: string | null;
-  videoUrl: string;
+  videoUrl: string | null;
   thumbnailUrl?: string | null;
   duration?: string | null;
   categoryId: string;
@@ -94,11 +94,11 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
 };
 
 const VIDEO_POSTERS: Record<string, string> = {
-  "cinematic-wedding-highlights": "/uploads/portfolio/wedding-photography/_KPL4474.JPG",
-  "pre-wedding-films": "/uploads/portfolio/pre-wedding-photography/_RTP4259.jpg",
-  "corporate-videos": "/uploads/portfolio/brand/logo.jpeg",
-  "event-videos": "/uploads/portfolio/baby-shower/179A9323.JPG",
-  "social-media-reels": "/uploads/portfolio/brand/logo.jpeg",
+  "cinematic-wedding-highlights": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+  "pre-wedding-films": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp",
+  "corporate-videos": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+  "event-videos": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp",
+  "social-media-reels": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
 };
 
 /* ---------------- Main Categories Section ---------------- */
@@ -301,12 +301,20 @@ function CategoryCard({
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04] group-hover:saturate-110"
           />
-        ) : kind === "videos" && featuredVideo ? (
+        ) : kind === "videos" && featuredVideo?.videoUrl ? (
           <CategoryVideoPreview
             src={featuredVideo.videoUrl}
             poster={featuredVideo.thumbnailUrl || VIDEO_POSTERS[slug]}
             title={featuredVideo.title}
             reduce={reduce}
+          />
+        ) : kind === "videos" && featuredVideo ? (
+          <img
+            src={featuredVideo.thumbnailUrl || VIDEO_POSTERS[slug]}
+            alt={`${featuredVideo.title} preview`}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
           />
         ) : null}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
@@ -477,6 +485,8 @@ function CategoryModal({
 
   React.useEffect(() => {
     if (!active) {
+      // Reset the closed modal's cached album outside the render path.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setItems([]);
       setLoading(false);
       return;
@@ -887,7 +897,7 @@ function LightboxBody({
         />
       ) : (
         <div className="aspect-video bg-black">
-          <FilmFrame url={video.videoUrl} />
+          <FilmFrame url={video.videoUrl} poster={video.thumbnailUrl} />
         </div>
       )}
       <div className="px-6 py-4 bg-black/80 border-t border-gold/15">
@@ -923,7 +933,20 @@ function LightboxBody({
   );
 }
 
-function FilmFrame({ url }: { url: string }) {
+function FilmFrame({ url, poster }: { url: string | null; poster?: string | null }) {
+  if (!url && poster) {
+    return (
+      <div className="relative flex h-full w-full items-center justify-center bg-black">
+        <img src={poster} alt="Film preview" className="absolute inset-0 h-full w-full object-contain opacity-80" />
+        <div className="relative z-10 rounded-lg border border-gold/30 bg-black/75 px-5 py-4 text-center text-sm text-cream/85 backdrop-blur-sm">
+          This film is temporarily unavailable online. Contact us to view it.
+        </div>
+      </div>
+    );
+  }
+  if (!url) {
+    return <div className="flex h-full items-center justify-center text-sm text-cream/60">Film preview unavailable.</div>;
+  }
   const src = getEmbedSrc(url);
   if (!src) {
     return (

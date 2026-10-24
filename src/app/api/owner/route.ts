@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import portfolioFallback from "@/lib/portfolio-fallback.json";
 
 export async function GET() {
   try {
     const owner = await db.ownerInfo.findFirst();
     if (!owner) {
-      return NextResponse.json({ owner: null });
+      return NextResponse.json({ owner: portfolioFallback.owner });
     }
     let stats: { label: string; value: string }[] = [];
     try {
@@ -27,13 +28,13 @@ export async function GET() {
         pincode: owner.pincode,
         country: owner.country,
         stats,
-        photoUrl: owner.photoUrl,
+        photoUrl:
+          owner.photoUrl?.startsWith("/uploads/")
+            ? portfolioFallback.owner?.photoUrl ?? null
+            : owner.photoUrl,
       },
     });
   } catch (e) {
-    return NextResponse.json(
-      { error: "Failed to load owner info", detail: String(e) },
-      { status: 500 }
-    );
+    return NextResponse.json({ owner: portfolioFallback.owner });
   }
 }

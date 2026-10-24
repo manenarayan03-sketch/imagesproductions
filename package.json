@@ -13,6 +13,9 @@
     "db:generate": "prisma generate",
     "db:generate:netlify": "prisma generate --schema=prisma/schema.netlify.prisma",
     "portfolio:import": "node scripts/import-portfolio.cjs",
+    "portfolio:prepare-public": "node scripts/prepare-public-portfolio.cjs",
+    "prebuild": "npm run portfolio:prepare-public",
+    "prebuild:netlify": "npm run portfolio:prepare-public",
     "db:migrate": "prisma migrate dev",
     "db:reset": "prisma migrate reset"
   },

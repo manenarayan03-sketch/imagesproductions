@@ -7,6 +7,7 @@ import { Categories } from "@/components/site/categories";
 import { Contact } from "@/components/site/contact";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
+import portfolioFallback from "@/lib/portfolio-fallback.json";
 
 export const dynamic = "force-dynamic";
 
@@ -37,10 +38,13 @@ async function getInitialData() {
         pincode: ownerRow.pincode,
         country: ownerRow.country,
         stats,
-        photoUrl: ownerRow.photoUrl,
+        photoUrl:
+          ownerRow.photoUrl?.startsWith("/uploads/")
+            ? portfolioFallback.owner?.photoUrl ?? null
+            : ownerRow.photoUrl,
       };
     }
-    const site = siteRow ?? {
+    const site = siteRow ?? portfolioFallback.site ?? {
       companyName: "IMAGES PRODUCTION",
       tagline: "Frames Alive with Imagination",
       heroHeadline: "IMAGES PRODUCTION",
@@ -55,12 +59,12 @@ async function getInitialData() {
       vimeo: null,
       facebook: null,
     };
-    return { owner, site };
+    return { owner: owner ?? portfolioFallback.owner, site };
   } catch (e) {
     // Fallback to hardcoded defaults if DB not yet seeded
     return {
-      owner: null,
-      site: {
+      owner: portfolioFallback.owner,
+      site: portfolioFallback.site ?? {
         companyName: "IMAGES PRODUCTION",
         tagline: "Frames Alive with Imagination",
         heroHeadline: "IMAGES PRODUCTION",
@@ -94,7 +98,11 @@ export default async function Home() {
           primaryCta={site.heroCtaPrimary}
           secondaryCta={site.heroCtaSecondary}
           whatsapp={whatsapp}
-          heroVideoUrl={site.heroVideoUrl}
+          heroVideoUrl={
+            typeof site.heroVideoUrl === "string" && site.heroVideoUrl.startsWith("/uploads/")
+              ? null
+              : site.heroVideoUrl
+          }
         />
         <About owner={owner} whatsapp={whatsapp} />
         <Services whatsapp={whatsapp} />

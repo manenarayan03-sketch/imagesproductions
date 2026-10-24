@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import portfolioFallback from "@/lib/portfolio-fallback.json";
 
 export async function GET(req: NextRequest) {
   try {
@@ -31,11 +32,25 @@ export async function GET(req: NextRequest) {
         category: { select: { id: true, name: true, slug: true } },
       },
     });
-    return NextResponse.json({ photos });
+    return NextResponse.json({
+      photos: photos.map((photo) => ({
+        ...photo,
+        imageUrl:
+          portfolioFallback.photos.find((fallbackPhoto) => fallbackPhoto.id === photo.id)?.imageUrl ??
+          photo.imageUrl,
+      })),
+    });
   } catch (e) {
-    return NextResponse.json(
-      { error: "Failed to load photos", detail: String(e) },
-      { status: 500 }
+    const { searchParams } = new URL(req.url);
+    const categoryId = searchParams.get("categoryId");
+    const limitRaw = searchParams.get("limit");
+    const take =
+      limitRaw && !Number.isNaN(Number(limitRaw))
+        ? Math.max(1, Math.min(200, Number(limitRaw)))
+        : undefined;
+    const photos = portfolioFallback.photos.filter(
+      (photo) => !categoryId || photo.categoryId === categoryId
     );
+    return NextResponse.json({ photos: take ? photos.slice(0, take) : photos });
   }
 }

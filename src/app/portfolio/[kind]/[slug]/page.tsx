@@ -3,15 +3,16 @@ import { ArrowLeft, ArrowUpRight, Images, Play } from "lucide-react";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { buildWhatsAppLink } from "@/lib/site-utils";
+import portfolioFallback from "@/lib/portfolio-fallback.json";
 
 export const dynamic = "force-dynamic";
 
 const VIDEO_POSTERS: Record<string, string> = {
-  "cinematic-wedding-highlights": "/uploads/portfolio/wedding-photography/_KPL4474.JPG",
-  "pre-wedding-films": "/uploads/portfolio/pre-wedding-photography/_RTP4259.jpg",
-  "corporate-videos": "/uploads/portfolio/brand/logo.jpeg",
-  "event-videos": "/uploads/portfolio/baby-shower/179A9323.JPG",
-  "social-media-reels": "/uploads/portfolio/brand/logo.jpeg",
+  "cinematic-wedding-highlights": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+  "pre-wedding-films": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp",
+  "corporate-videos": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+  "event-videos": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp",
+  "social-media-reels": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
 };
 
 type PortfolioPageProps = {
@@ -23,8 +24,12 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
   if (kind !== "photos" && kind !== "videos") notFound();
 
   const isPhotos = kind === "photos";
-  const category = isPhotos
-    ? await db.photographyCategory.findFirst({
+  const fallbackCategories = isPhotos
+    ? portfolioFallback.photoCategories
+    : portfolioFallback.videoCategories;
+  const fallbackCategory = fallbackCategories.find((item) => item.slug === slug);
+  const categoryQuery = isPhotos
+    ? db.photographyCategory.findFirst({
         where: { slug, published: true, photos: { some: { published: true } } },
         select: {
           id: true,
@@ -33,7 +38,7 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
           _count: { select: { photos: { where: { published: true } } } },
         },
       })
-    : await db.videoCategory.findFirst({
+    : db.videoCategory.findFirst({
         where: { slug, published: true, videos: { some: { published: true } } },
         select: {
           id: true,
@@ -41,7 +46,9 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
           description: true,
           _count: { select: { videos: { where: { published: true } } } },
         },
-      });
+        });
+      let category = await categoryQuery.catch(() => null);
+  if (!category && fallbackCategory) category = fallbackCategory;
 
   if (!category) notFound();
 
@@ -51,7 +58,7 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
           where: { categoryId: category.id, published: true },
           orderBy: [{ order: "asc" }, { createdAt: "desc" }],
           select: { id: true, title: true, description: true, imageUrl: true },
-        })
+        }).catch(() => [])
       : Promise.resolve([]),
     isPhotos
       ? Promise.resolve([])
@@ -65,13 +72,33 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
             videoUrl: true,
             thumbnailUrl: true,
           },
-        }),
-    db.siteContent.findFirst({ select: { companyName: true, whatsappNumber: true } }),
+        }).catch(() => []),
+    db.siteContent.findFirst({ select: { companyName: true, whatsappNumber: true } }).catch(() => null),
   ]);
 
-  const count = isPhotos ? photos.length : videos.length;
-  const companyName = site?.companyName || "IMAGES PRODUCTION";
-  const whatsapp = site?.whatsappNumber || "+91 8433975695";
+  const fallbackPhotos = portfolioFallback.photos.filter((photo) => photo.categoryId === category.id);
+  const fallbackVideos = portfolioFallback.videos.filter((video) => video.categoryId === category.id);
+  const galleryPhotos = photos.length
+    ? photos.map((photo) => ({
+        ...photo,
+        imageUrl:
+          portfolioFallback.photos.find((fallbackPhoto) => fallbackPhoto.id === photo.id)?.imageUrl ??
+          photo.imageUrl,
+      }))
+    : fallbackPhotos;
+  const galleryVideos = videos.length
+    ? videos.map((video) => {
+        const fallbackVideo = portfolioFallback.videos.find((item) => item.id === video.id);
+        return {
+          ...video,
+          videoUrl: video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl,
+          thumbnailUrl: fallbackVideo?.thumbnailUrl ?? video.thumbnailUrl,
+        };
+      })
+    : fallbackVideos;
+  const count = isPhotos ? galleryPhotos.length : galleryVideos.length;
+  const companyName = site?.companyName || portfolioFallback.site?.companyName || "IMAGES PRODUCTION";
+  const whatsapp = site?.whatsappNumber || portfolioFallback.site?.whatsappNumber || "+91 8433975695";
 
   return (
     <main className="min-h-screen bg-[#08080d] text-cream">
@@ -113,7 +140,7 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
 
         {isPhotos ? (
           <div className="mt-12 columns-1 gap-5 sm:columns-2 lg:columns-3">
-            {photos.map((photo) => (
+            {galleryPhotos.map((photo) => (
               <article
                 key={photo.id}
                 className="group relative mb-5 break-inside-avoid overflow-hidden rounded-xl border border-gold/15 bg-black/40"
@@ -136,11 +163,12 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
           </div>
         ) : (
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {videos.map((video) => (
+            {galleryVideos.map((video) => (
               <article
                 key={video.id}
                 className="overflow-hidden rounded-xl border border-gold/15 bg-white/[0.025]"
               >
+                {video.videoUrl ? (
                 <video
                   src={video.videoUrl}
                   poster={video.thumbnailUrl || VIDEO_POSTERS[slug]}
@@ -150,6 +178,18 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
                   aria-label={video.title}
                   className="aspect-video w-full bg-black object-cover"
                 />
+                ) : (
+                  <div className="relative flex aspect-video items-center justify-center bg-black">
+                    <img
+                      src={video.thumbnailUrl || VIDEO_POSTERS[slug]}
+                      alt={`${video.title} poster`}
+                      className="absolute inset-0 h-full w-full object-contain opacity-80"
+                    />
+                    <p className="relative z-10 rounded-lg bg-black/75 px-4 py-3 text-center text-sm text-cream/85">
+                      This film is not hosted online yet. Contact us to view it.
+                    </p>
+                  </div>
+                )}
                 <div className="p-5">
                   <h2 className="font-heading text-lg text-cream">{video.title}</h2>
                   {video.description && (

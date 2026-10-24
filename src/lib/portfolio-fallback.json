@@ -1,0 +1,1977 @@
+{
+  "photoCategories": [
+    {
+      "id": "cmvldegbn0001vm50098blr8f",
+      "name": "Traditional Wedding Photography",
+      "slug": "traditional-wedding-photography",
+      "description": null,
+      "order": 0,
+      "_count": {
+        "photos": 12
+      },
+      "photos": [
+        {
+          "id": "cmvldegiq001zvm50eww7t0o8",
+          "title": "KPL4474",
+          "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnw30004vmd834x6lzte",
+      "name": "Pre-Wedding Photography",
+      "slug": "pre-wedding-photography",
+      "description": null,
+      "order": 1,
+      "_count": {
+        "photos": 35
+      },
+      "photos": [
+        {
+          "id": "cmvldegkr002nvm50c7yuqb8r",
+          "title": "RTP4259",
+          "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnwj0007vmd8ofnwaj2x",
+      "name": "Baby Shower Photography",
+      "slug": "baby-shower-photography",
+      "description": null,
+      "order": 4,
+      "_count": {
+        "photos": 46
+      },
+      "photos": [
+        {
+          "id": "cmvldegqr004lvm50u14bgq8f",
+          "title": "179A9323",
+          "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnxh000dvmd8rosfsmi8",
+      "name": "Candid Photography",
+      "slug": "candid-photography",
+      "description": null,
+      "order": 10,
+      "_count": {
+        "photos": 30
+      },
+      "photos": [
+        {
+          "id": "cmvldegdm000bvm50x4upissg",
+          "title": "KPL4512",
+          "imageUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp"
+        }
+      ]
+    }
+  ],
+  "videoCategories": [
+    {
+      "id": "cmvldegcm0007vm50btmqdtin",
+      "name": "Event Videos",
+      "slug": "event-videos",
+      "description": null,
+      "order": 0,
+      "_count": {
+        "videos": 1
+      },
+      "videos": [
+        {
+          "id": "cmvldeh3m007nvm50612smr32",
+          "title": "Birthday Hight",
+          "videoUrl": null,
+          "thumbnailUrl": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnxy000gvmd87ryyvm2n",
+      "name": "Cinematic Wedding Highlights",
+      "slug": "cinematic-wedding-highlights",
+      "description": null,
+      "order": 1,
+      "_count": {
+        "videos": 3
+      },
+      "videos": [
+        {
+          "id": "cmvldeh1z0075vm50y60n0zqw",
+          "title": "Cinematic Weds",
+          "videoUrl": null,
+          "thumbnailUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddny3000hvmd89uw5xrre",
+      "name": "Pre-Wedding Films",
+      "slug": "pre-wedding-films",
+      "description": null,
+      "order": 2,
+      "_count": {
+        "videos": 2
+      },
+      "videos": [
+        {
+          "id": "cmvldeh2j007bvm50ojyr0q3f",
+          "title": "A + N Prewedding Highlight1",
+          "videoUrl": null,
+          "thumbnailUrl": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnye000jvmd82oo5d85j",
+      "name": "Corporate Videos",
+      "slug": "corporate-videos",
+      "description": null,
+      "order": 4,
+      "_count": {
+        "videos": 4
+      },
+      "videos": [
+        {
+          "id": "cmvldeh2v007fvm502yf7avho",
+          "title": "CA Firm",
+          "videoUrl": null,
+          "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp"
+        }
+      ]
+    },
+    {
+      "id": "cmvlddnz0000nvmd8bxdo3jp9",
+      "name": "Social Media Reels",
+      "slug": "social-media-reels",
+      "description": null,
+      "order": 8,
+      "_count": {
+        "videos": 2
+      },
+      "videos": [
+        {
+          "id": "cmvldeh3s007pvm50bf2a7wfl",
+          "title": "Images Production",
+          "videoUrl": null,
+          "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp"
+        }
+      ]
+    }
+  ],
+  "photos": [
+    {
+      "id": "cmvldegqr004lvm50u14bgq8f",
+      "title": "179A9323",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegkr002nvm50c7yuqb8r",
+      "title": "RTP4259",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegiq001zvm50eww7t0o8",
+      "title": "KPL4474",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 0,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegdm000bvm50x4upissg",
+      "title": "KPL4512",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegqx004nvm507ous9545",
+      "title": "179A9324",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegqx004nvm507ous9545.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegkx002pvm508q3el9re",
+      "title": "RTP4555",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegkx002pvm508q3el9re.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegiw0021vm50nskqxhbb",
+      "title": "KPL4482",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiw0021vm50nskqxhbb.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 1,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegds000dvm50896z4rqc",
+      "title": "Cinematic photo 3",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegds000dvm50896z4rqc.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegr4004pvm50bg0sbsvx",
+      "title": "179A9325",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegr4004pvm50bg0sbsvx.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 2,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegl4002rvm50qgnvvfkn",
+      "title": "RTP5210",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegl4002rvm50qgnvvfkn.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 2,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegj10023vm50d33af2ag",
+      "title": "KPL4625",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegj10023vm50d33af2ag.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 2,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegdy000fvm50sxe1eod4",
+      "title": "Cinematic photo 4",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegdy000fvm50sxe1eod4.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 2,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegra004rvm50ewdjex4g",
+      "title": "179A9326",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegra004rvm50ewdjex4g.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 3,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegl9002tvm50cc50pxax",
+      "title": "RTP5253",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegl9002tvm50cc50pxax.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 3,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegj80025vm50k5bg1jhy",
+      "title": "KPL4649",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegj80025vm50k5bg1jhy.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 3,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldege5000hvm50kj7tvsoa",
+      "title": "Cinematic photo 5",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldege5000hvm50kj7tvsoa.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 3,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegrv004tvm50vgwsuvs4",
+      "title": "179A9327",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegrv004tvm50vgwsuvs4.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 4,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegle002vvm50q7a78oo8",
+      "title": "Mane 01",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegle002vvm50q7a78oo8.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 4,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegje0027vm502z4zcswc",
+      "title": "KPL4660",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegje0027vm502z4zcswc.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 4,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegeb000jvm50yxbtij0n",
+      "title": "Cinematic photo 6",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegeb000jvm50yxbtij0n.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 4,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegtp004vvm50g6q0tirm",
+      "title": "179A9330",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegtp004vvm50g6q0tirm.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 5,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeglk002xvm500rr2hw7b",
+      "title": "Mane 02",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldeglk002xvm500rr2hw7b.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 5,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegjl0029vm50sdkaxo8e",
+      "title": "Cinematic photo 1",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegjl0029vm50sdkaxo8e.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 5,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegeh000lvm50z3sgaira",
+      "title": "DSC 5686",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegeh000lvm50z3sgaira.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 5,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegu0004xvm50zt2tk60h",
+      "title": "179A9332",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegu0004xvm50zt2tk60h.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 6,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeglq002zvm50l2qnlfh0",
+      "title": "Mane 03",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldeglq002zvm50l2qnlfh0.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 6,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegjr002bvm50tj1nbtgs",
+      "title": "Cinematic photo 2",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegjr002bvm50tj1nbtgs.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 6,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegen000nvm50u50h6muw",
+      "title": "DSC 5713",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegen000nvm50u50h6muw.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 6,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegu8004zvm50boscsasr",
+      "title": "179A9334",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegu8004zvm50boscsasr.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 7,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeglx0031vm50cq6j14vb",
+      "title": "Mane 04",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldeglx0031vm50cq6j14vb.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 7,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegjw002dvm50ysr2uwxf",
+      "title": "IMG 9257",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegjw002dvm50ysr2uwxf.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 7,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeges000pvm508gdg7or2",
+      "title": "DSC 5714",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeges000pvm508gdg7or2.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 7,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldeguf0051vm509w8np7qp",
+      "title": "179A9335",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeguf0051vm509w8np7qp.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 8,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegm30033vm507pcjwhik",
+      "title": "Mane 05",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegm30033vm507pcjwhik.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 8,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegk3002fvm50rkfe5x1b",
+      "title": "IMG 9965",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegk3002fvm50rkfe5x1b.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 8,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegf0000rvm50qj4ghexu",
+      "title": "DSC 5717",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegf0000rvm50qj4ghexu.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 8,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegv40053vm50vv5yti1n",
+      "title": "179A9336",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegv40053vm50vv5yti1n.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 9,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegm80035vm50doklvhmd",
+      "title": "Mane 06",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegm80035vm50doklvhmd.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 9,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegka002hvm50a3eppbfs",
+      "title": "IMG 9969",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegka002hvm50a3eppbfs.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 9,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegf6000tvm507kd4vax0",
+      "title": "DSC 5720",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegf6000tvm507kd4vax0.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 9,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegvd0055vm50r94iycpf",
+      "title": "179A9338",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegvd0055vm50r94iycpf.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 10,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegmf0037vm50i6z6bgpw",
+      "title": "Mane 07",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegmf0037vm50i6z6bgpw.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 10,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegkf002jvm50lts2djfp",
+      "title": "wedding photo 1",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegkf002jvm50lts2djfp.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 10,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegfc000vvm5053cp6jvu",
+      "title": "DSC 5723",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegfc000vvm5053cp6jvu.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 10,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegvj0057vm50v75bv7p5",
+      "title": "179A9340",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegvj0057vm50v75bv7p5.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 11,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegmm0039vm50ygj53mnc",
+      "title": "Mane 08",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegmm0039vm50ygj53mnc.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 11,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegkl002lvm509rfjr5ar",
+      "title": "weding photo 2",
+      "description": null,
+      "imageUrl": "/portfolio-media/traditional-wedding-photography/cmvldegkl002lvm509rfjr5ar.webp",
+      "categoryId": "cmvldegbn0001vm50098blr8f",
+      "order": 11,
+      "category": {
+        "id": "cmvldegbn0001vm50098blr8f",
+        "name": "Traditional Wedding Photography",
+        "slug": "traditional-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegfi000xvm50so5i4fhk",
+      "title": "DSC 5725",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegfi000xvm50so5i4fhk.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 11,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegvr0059vm50qronsycv",
+      "title": "179A9342",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegvr0059vm50qronsycv.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 12,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegmt003bvm505dxhbfva",
+      "title": "Mane 09",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegmt003bvm505dxhbfva.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 12,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegfo000zvm5082rcgib0",
+      "title": "DSC 5727",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegfo000zvm5082rcgib0.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 12,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegvw005bvm506t5amguq",
+      "title": "179A9343",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegvw005bvm506t5amguq.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 13,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegn0003dvm50t6cj7k2g",
+      "title": "Mane 10",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegn0003dvm50t6cj7k2g.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 13,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegfu0011vm50xz7ag8oj",
+      "title": "DSC 5729",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegfu0011vm50xz7ag8oj.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 13,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegw1005dvm508kipotlm",
+      "title": "179A9344",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegw1005dvm508kipotlm.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 14,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegn5003fvm50nfgfxedf",
+      "title": "Mane 11",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegn5003fvm50nfgfxedf.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 14,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegg00013vm50nc93ds5g",
+      "title": "DSC 5742",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegg00013vm50nc93ds5g.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 14,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegw7005fvm509e6p0goo",
+      "title": "179A9345",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegw7005fvm509e6p0goo.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 15,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegnb003hvm50psld1pbx",
+      "title": "Mane 12",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegnb003hvm50psld1pbx.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 15,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegg50015vm50m704sic1",
+      "title": "KKPL2682",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegg50015vm50m704sic1.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 15,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegwc005hvm502hn2p0hg",
+      "title": "179A9346",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegwc005hvm502hn2p0hg.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 16,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegnh003jvm509ci362bx",
+      "title": "Mane 13",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegnh003jvm509ci362bx.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 16,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegga0017vm50zt0hhd1o",
+      "title": "KKPL3012",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegga0017vm50zt0hhd1o.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 16,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegwi005jvm50zp7h83ca",
+      "title": "179A9349",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegwi005jvm50zp7h83ca.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 17,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegnn003lvm50lncsxinx",
+      "title": "Mane 14",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegnn003lvm50lncsxinx.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 17,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeggg0019vm50uo3bshxf",
+      "title": "KKPL3053",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeggg0019vm50uo3bshxf.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 17,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegwo005lvm50pku0fbql",
+      "title": "179A9351",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegwo005lvm50pku0fbql.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 18,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegnu003nvm50muzni2vx",
+      "title": "Mane 15",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegnu003nvm50muzni2vx.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 18,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeggm001bvm502cwjq333",
+      "title": "KKPL3062",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeggm001bvm502cwjq333.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 18,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegwt005nvm50e8xcucnq",
+      "title": "179A9353",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegwt005nvm50e8xcucnq.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 19,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldego1003pvm50ctxphd87",
+      "title": "Mane 16",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldego1003pvm50ctxphd87.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 19,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeggr001dvm50nnujxkvt",
+      "title": "KKPL3214",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeggr001dvm50nnujxkvt.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 19,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegwy005pvm5047z742aq",
+      "title": "179A9354",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegwy005pvm5047z742aq.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 20,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldego7003rvm50oswkw2hw",
+      "title": "Mane 17",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldego7003rvm50oswkw2hw.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 20,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegh2001fvm50s2i5avy4",
+      "title": "NI3P0109",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegh2001fvm50s2i5avy4.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 20,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegx4005rvm50imsgs7or",
+      "title": "179A9356",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegx4005rvm50imsgs7or.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 21,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegod003tvm50pn7lr8ie",
+      "title": "Mane 18",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegod003tvm50pn7lr8ie.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 21,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegh8001hvm50q8ne01r0",
+      "title": "NI3P0113",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegh8001hvm50q8ne01r0.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 21,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegxa005tvm50r14bbe46",
+      "title": "179A9358",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegxa005tvm50r14bbe46.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 22,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegoj003vvm50erhsdhq3",
+      "title": "Mane 19",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegoj003vvm50erhsdhq3.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 22,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeghe001jvm50qfiilfpu",
+      "title": "NI3P0117",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeghe001jvm50qfiilfpu.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 22,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegxh005vvm5007bd9jhj",
+      "title": "179A9359",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegxh005vvm5007bd9jhj.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 23,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegoq003xvm507qxmtnvp",
+      "title": "Mane 20",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegoq003xvm507qxmtnvp.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 23,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeghk001lvm50bgflehcy",
+      "title": "RTP 0663",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeghk001lvm50bgflehcy.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 23,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegxo005xvm50rhp1c4jn",
+      "title": "179A9361",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegxo005xvm50rhp1c4jn.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 24,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegow003zvm50xbftg6e5",
+      "title": "Mane 21",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegow003zvm50xbftg6e5.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 24,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeghq001nvm50teu1oeki",
+      "title": "RTP 1035",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeghq001nvm50teu1oeki.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 24,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegxt005zvm50aqpzhmxw",
+      "title": "179A9363",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegxt005zvm50aqpzhmxw.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 25,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegp10041vm50vch5tpqp",
+      "title": "RTP4259",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegp10041vm50vch5tpqp.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 25,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeghw001pvm50a1c8il9e",
+      "title": "RTP 1041",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldeghw001pvm50a1c8il9e.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 25,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegxz0061vm50zl7m1ykh",
+      "title": "179A9364",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegxz0061vm50zl7m1ykh.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 26,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegp70043vm50mchhklwt",
+      "title": "RTP4555",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegp70043vm50mchhklwt.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 26,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegi2001rvm503qklmznh",
+      "title": "RTP 1044",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegi2001rvm503qklmznh.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 26,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegy50063vm50j0jimsk4",
+      "title": "179A9365",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegy50063vm50j0jimsk4.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 27,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegpe0045vm502yepeoog",
+      "title": "RTP4622",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegpe0045vm502yepeoog.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 27,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegi8001tvm50io53vu88",
+      "title": "RTP 1047",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegi8001tvm50io53vu88.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 27,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegyc0065vm50ngs14p97",
+      "title": "179A9366",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegyc0065vm50ngs14p97.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 28,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegpk0047vm508kzi1gw8",
+      "title": "RTP4641",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegpk0047vm508kzi1gw8.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 28,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegie001vvm50ir6dfhpe",
+      "title": "RTP 1259",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegie001vvm50ir6dfhpe.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 28,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegyi0067vm50nur97iy9",
+      "title": "179A9367",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegyi0067vm50nur97iy9.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 29,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegpq0049vm500snwfkuh",
+      "title": "RTP4744",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegpq0049vm500snwfkuh.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 29,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegik001xvm507tcq1n4g",
+      "title": "RTP 1267",
+      "description": null,
+      "imageUrl": "/portfolio-media/candid-photography/cmvldegik001xvm507tcq1n4g.webp",
+      "categoryId": "cmvlddnxh000dvmd8rosfsmi8",
+      "order": 29,
+      "category": {
+        "id": "cmvlddnxh000dvmd8rosfsmi8",
+        "name": "Candid Photography",
+        "slug": "candid-photography"
+      }
+    },
+    {
+      "id": "cmvldegyo0069vm50l59ihip0",
+      "title": "179A9369",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegyo0069vm50l59ihip0.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 30,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegpw004bvm50gzspemz9",
+      "title": "RTP4850",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegpw004bvm50gzspemz9.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 30,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegze006bvm50sv2zhomj",
+      "title": "179A9370",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegze006bvm50sv2zhomj.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 31,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegq1004dvm50pc3xf1qg",
+      "title": "RTP5052",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegq1004dvm50pc3xf1qg.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 31,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegzl006dvm5032xs7869",
+      "title": "179A9373",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegzl006dvm5032xs7869.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 32,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegq8004fvm50lrywydhc",
+      "title": "RTP5097",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegq8004fvm50lrywydhc.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 32,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegzq006fvm50850aowru",
+      "title": "179A9374",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegzq006fvm50850aowru.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 33,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegqe004hvm5042j5c7lo",
+      "title": "RTP5210",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegqe004hvm5042j5c7lo.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 33,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldegzw006hvm50qzba339q",
+      "title": "179A9375",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldegzw006hvm50qzba339q.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 34,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldegql004jvm506l13pcf1",
+      "title": "RTP5253",
+      "description": null,
+      "imageUrl": "/portfolio-media/pre-wedding-photography/cmvldegql004jvm506l13pcf1.webp",
+      "categoryId": "cmvlddnw30004vmd834x6lzte",
+      "order": 34,
+      "category": {
+        "id": "cmvlddnw30004vmd834x6lzte",
+        "name": "Pre-Wedding Photography",
+        "slug": "pre-wedding-photography"
+      }
+    },
+    {
+      "id": "cmvldeh02006jvm50mm7nnftf",
+      "title": "179A9376",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh02006jvm50mm7nnftf.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 35,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh07006lvm50khi9q679",
+      "title": "179A9377",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh07006lvm50khi9q679.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 36,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh0e006nvm50n5viebtz",
+      "title": "179A9379",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh0e006nvm50n5viebtz.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 37,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh0k006pvm50iih7hm7t",
+      "title": "179A9381",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh0k006pvm50iih7hm7t.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 38,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh0r006rvm50r93qs45j",
+      "title": "179A9382",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh0r006rvm50r93qs45j.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 39,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh0x006tvm500nh3swz6",
+      "title": "179A9384",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh0x006tvm500nh3swz6.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 40,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh13006vvm50q8gsv2l4",
+      "title": "179A9386",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh13006vvm50q8gsv2l4.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 41,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh19006xvm505u0bscdb",
+      "title": "179A9387",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh19006xvm505u0bscdb.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 42,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh1g006zvm50cizgu6jg",
+      "title": "179A9388",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh1g006zvm50cizgu6jg.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 43,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh1l0071vm50npsckvy3",
+      "title": "179A9389",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh1l0071vm50npsckvy3.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 44,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    },
+    {
+      "id": "cmvldeh1r0073vm5062x9n7dt",
+      "title": "179A9390",
+      "description": null,
+      "imageUrl": "/portfolio-media/baby-shower-photography/cmvldeh1r0073vm5062x9n7dt.webp",
+      "categoryId": "cmvlddnwj0007vmd8ofnwaj2x",
+      "order": 45,
+      "category": {
+        "id": "cmvlddnwj0007vmd8ofnwaj2x",
+        "name": "Baby Shower Photography",
+        "slug": "baby-shower-photography"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": "cmvldeh3s007pvm50bf2a7wfl",
+      "title": "Images Production",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnz0000nvmd8bxdo3jp9",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnz0000nvmd8bxdo3jp9",
+        "name": "Social Media Reels",
+        "slug": "social-media-reels"
+      }
+    },
+    {
+      "id": "cmvldeh3m007nvm50612smr32",
+      "title": "Birthday Hight",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/baby-shower-photography/cmvldegqr004lvm50u14bgq8f.webp",
+      "duration": null,
+      "categoryId": "cmvldegcm0007vm50btmqdtin",
+      "order": 0,
+      "category": {
+        "id": "cmvldegcm0007vm50btmqdtin",
+        "name": "Event Videos",
+        "slug": "event-videos"
+      }
+    },
+    {
+      "id": "cmvldeh2v007fvm502yf7avho",
+      "title": "CA Firm",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnye000jvmd82oo5d85j",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnye000jvmd82oo5d85j",
+        "name": "Corporate Videos",
+        "slug": "corporate-videos"
+      }
+    },
+    {
+      "id": "cmvldeh2j007bvm50ojyr0q3f",
+      "title": "A + N Prewedding Highlight1",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp",
+      "duration": null,
+      "categoryId": "cmvlddny3000hvmd89uw5xrre",
+      "order": 0,
+      "category": {
+        "id": "cmvlddny3000hvmd89uw5xrre",
+        "name": "Pre-Wedding Films",
+        "slug": "pre-wedding-films"
+      }
+    },
+    {
+      "id": "cmvldeh1z0075vm50y60n0zqw",
+      "title": "Cinematic Weds",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+      "duration": null,
+      "categoryId": "cmvlddnxy000gvmd87ryyvm2n",
+      "order": 0,
+      "category": {
+        "id": "cmvlddnxy000gvmd87ryyvm2n",
+        "name": "Cinematic Wedding Highlights",
+        "slug": "cinematic-wedding-highlights"
+      }
+    },
+    {
+      "id": "cmvldeh3x007rvm5002zuynkb",
+      "title": "Reel Shoot 1",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnz0000nvmd8bxdo3jp9",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnz0000nvmd8bxdo3jp9",
+        "name": "Social Media Reels",
+        "slug": "social-media-reels"
+      }
+    },
+    {
+      "id": "cmvldeh32007hvm509hlna4vq",
+      "title": "Dela",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnye000jvmd82oo5d85j",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnye000jvmd82oo5d85j",
+        "name": "Corporate Videos",
+        "slug": "corporate-videos"
+      }
+    },
+    {
+      "id": "cmvldeh2p007dvm50bcunkivp",
+      "title": "A + N Teaser 1",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/pre-wedding-photography/cmvldegkr002nvm50c7yuqb8r.webp",
+      "duration": null,
+      "categoryId": "cmvlddny3000hvmd89uw5xrre",
+      "order": 1,
+      "category": {
+        "id": "cmvlddny3000hvmd89uw5xrre",
+        "name": "Pre-Wedding Films",
+        "slug": "pre-wedding-films"
+      }
+    },
+    {
+      "id": "cmvldeh260077vm504dqrvtjg",
+      "title": "Teaser Final",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+      "duration": null,
+      "categoryId": "cmvlddnxy000gvmd87ryyvm2n",
+      "order": 1,
+      "category": {
+        "id": "cmvlddnxy000gvmd87ryyvm2n",
+        "name": "Cinematic Wedding Highlights",
+        "slug": "cinematic-wedding-highlights"
+      }
+    },
+    {
+      "id": "cmvldeh3a007jvm50prj83shy",
+      "title": "Puspak Patpedi documentary",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnye000jvmd82oo5d85j",
+      "order": 2,
+      "category": {
+        "id": "cmvlddnye000jvmd82oo5d85j",
+        "name": "Corporate Videos",
+        "slug": "corporate-videos"
+      }
+    },
+    {
+      "id": "cmvldeh2d0079vm50ij5kv6hm",
+      "title": "Wedding Films",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/traditional-wedding-photography/cmvldegiq001zvm50eww7t0o8.webp",
+      "duration": null,
+      "categoryId": "cmvlddnxy000gvmd87ryyvm2n",
+      "order": 2,
+      "category": {
+        "id": "cmvlddnxy000gvmd87ryyvm2n",
+        "name": "Cinematic Wedding Highlights",
+        "slug": "cinematic-wedding-highlights"
+      }
+    },
+    {
+      "id": "cmvldeh3f007lvm50rw05gssy",
+      "title": "Tecnoformat",
+      "description": null,
+      "videoUrl": null,
+      "thumbnailUrl": "/portfolio-media/candid-photography/cmvldegdm000bvm50x4upissg.webp",
+      "duration": null,
+      "categoryId": "cmvlddnye000jvmd82oo5d85j",
+      "order": 3,
+      "category": {
+        "id": "cmvlddnye000jvmd82oo5d85j",
+        "name": "Corporate Videos",
+        "slug": "corporate-videos"
+      }
+    }
+  ],
+  "owner": {
+    "id": "cmvlddnvj0001vmd80xfwl1v3",
+    "name": "Narayan Maane",
+    "role": "Founder & Creative Director",
+    "bio": "Welcome to Images Production.\n\nI am Narayan Maane, Founder and Creative Director of Images Production, based in Mulund West, Mumbai.\n\nMy focus is on capturing meaningful moments, creating compelling visual stories, and transforming raw footage into memorable cinematic experiences.\n\nAt Images Production, we offer photography, videography, cinematography, and professional video editing services, with an emphasis on creativity, attention to detail, and understanding every client's unique vision.\n\nFrom personal celebrations and weddings to corporate projects and social media content, our goal is to bring every story to life through the power of visuals.\n\n**IMAGES PRODUCTION — FRAMES ALIVE WITH IMAGINATION.**",
+    "phone": "+91 8433975695",
+    "whatsapp": "+91 8433975695",
+    "address": "Jalaram Niwas, Ganesh Gawade Road, Near Canara Bank, Mulund West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400080",
+    "country": "India",
+    "stats": "[{\"label\":\"Years of Passion\",\"value\":\"5+\"},{\"label\":\"Stories Told\",\"value\":\"200+\"},{\"label\":\"Frames Crafted\",\"value\":\"10,000+\"}]",
+    "photoUrl": "/portfolio-media/owner.webp"
+  },
+  "site": {
+    "companyName": "IMAGES PRODUCTION",
+    "tagline": "Frames Alive with Imagination",
+    "heroHeadline": "IMAGES PRODUCTION",
+    "heroSubtext": "Photography • Videography • Video Editing",
+    "heroCtaPrimary": "VIEW OUR WORK",
+    "heroCtaSecondary": "CONTACT US",
+    "heroVideoUrl": null,
+    "whatsappNumber": "+91 8433975695",
+    "instagram": "",
+    "youtube": "",
+    "vimeo": "",
+    "facebook": ""
+  },
+  "generatedAt": "2026-10-24T16:42:48.649Z"
+}
