@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import portfolioFallback from "@/lib/portfolio-fallback.json";
+import portfolioVideoUrls from "@/lib/portfolio-video-urls";
 
 export async function GET(req: NextRequest) {
   try {
@@ -39,7 +40,9 @@ export async function GET(req: NextRequest) {
         const fallbackVideo = portfolioFallback.videos.find((item) => item.id === video.id);
         return {
           ...video,
-          videoUrl: video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl,
+          videoUrl:
+            portfolioVideoUrls[video.id] ??
+            (video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl),
           thumbnailUrl: fallbackVideo?.thumbnailUrl ?? video.thumbnailUrl,
         };
       }),
@@ -55,6 +58,11 @@ export async function GET(req: NextRequest) {
     const videos = portfolioFallback.videos.filter(
       (video) => !categoryId || video.categoryId === categoryId
     );
-    return NextResponse.json({ videos: take ? videos.slice(0, take) : videos });
+    return NextResponse.json({
+      videos: (take ? videos.slice(0, take) : videos).map((video) => ({
+        ...video,
+        videoUrl: portfolioVideoUrls[video.id] ?? video.videoUrl,
+      })),
+    });
   }
 }

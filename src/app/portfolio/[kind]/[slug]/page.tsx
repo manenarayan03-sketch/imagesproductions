@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { buildWhatsAppLink } from "@/lib/site-utils";
 import portfolioFallback from "@/lib/portfolio-fallback.json";
+import portfolioVideoUrls from "@/lib/portfolio-video-urls";
 
 export const dynamic = "force-dynamic";
 
@@ -91,11 +92,17 @@ export default async function PortfolioCategoryPage({ params }: PortfolioPagePro
         const fallbackVideo = portfolioFallback.videos.find((item) => item.id === video.id);
         return {
           ...video,
-          videoUrl: video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl,
+          videoUrl:
+            portfolioVideoUrls[video.id] ??
+            (video.videoUrl.startsWith("/uploads/") ? null : video.videoUrl),
           thumbnailUrl: fallbackVideo?.thumbnailUrl ?? video.thumbnailUrl,
         };
       })
-    : fallbackVideos;
+    : fallbackVideos.map((video) => ({
+        ...video,
+        videoUrl:
+          portfolioVideoUrls[video.id] ?? video.videoUrl,
+      }));
   const count = isPhotos ? galleryPhotos.length : galleryVideos.length;
   const companyName = site?.companyName || portfolioFallback.site?.companyName || "IMAGES PRODUCTION";
   const whatsapp = site?.whatsappNumber || portfolioFallback.site?.whatsappNumber || "+91 8433975695";

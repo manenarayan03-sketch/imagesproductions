@@ -17,8 +17,10 @@ node_modules
 /.next/
 /out/
 /public/uploads/
+/public/portfolio-media/
 /db/*.db
 /db/*.db-journal
+/.cache/
 
 # production
 /build

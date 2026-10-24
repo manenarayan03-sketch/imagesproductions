@@ -8,6 +8,7 @@ import { Contact } from "@/components/site/contact";
 import { Footer } from "@/components/site/footer";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import portfolioFallback from "@/lib/portfolio-fallback.json";
+import portfolioVideoUrls from "@/lib/portfolio-video-urls";
 
 export const dynamic = "force-dynamic";
 
@@ -100,7 +101,7 @@ export default async function Home() {
           whatsapp={whatsapp}
           heroVideoUrl={
             typeof site.heroVideoUrl === "string" && site.heroVideoUrl.startsWith("/uploads/")
-              ? null
+              ? portfolioVideoUrls.hero ?? null
               : site.heroVideoUrl
           }
         />
