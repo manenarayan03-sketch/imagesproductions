@@ -12,7 +12,7 @@ import portfolioFallback from "@/lib/portfolio-fallback.json";
 export const dynamic = "force-dynamic";
 
 // Default hero background video, served from /public.
-const HERO_VIDEO_URL = "/videos/hero-wedding-films.mp4";
+const HERO_VIDEO_URL = "/videos/hero-wedding-films 3.mp4";
 
 async function getInitialData() {
   try {
