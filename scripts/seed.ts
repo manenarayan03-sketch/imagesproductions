@@ -197,7 +197,7 @@ async function main() {
         //   - Vimeo:    https://vimeo.com/123456789
         //   - Direct:   https://example.com/hero.mp4  (or .webm / .mov / .ogg)
         // Direct MP4/WEBM URLs are recommended for best performance.
-        heroVideoUrl: "/uploads/videos/Wedding%20Films.mp4",
+        heroVideoUrl: "/uploads/videos/Wedding Films.mp4",
         whatsappNumber: "+91 8433975695",
         email: null,
         instagram: "",
@@ -211,7 +211,7 @@ async function main() {
     if (!site.heroVideoUrl) {
       await db.siteContent.update({
         where: { id: site.id },
-        data: { heroVideoUrl: "/uploads/videos/Wedding%20Films.mp4" },
+        data: { heroVideoUrl: "/uploads/videos/Wedding Films.mp4" },
       });
       console.log("✅ Existing SiteContent configured with the Wedding Films hero video");
     }
